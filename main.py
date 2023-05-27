@@ -1,5 +1,7 @@
+from User_Window import User_Window
 from Request import Request
 
 
-request = Request()
 
+User_Window()
+request = Request()
