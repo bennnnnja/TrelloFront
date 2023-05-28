@@ -36,7 +36,9 @@ class Login_Window:
 
     #команда для кнопки Отмена
     def close_login_window(self):
-        self.app.withdraw()
+        from Main_Window import Main_Window
+        self.app.destroy()
+        Main_Window()
 
     # команда для кнопки OK доделать когда будет бэк
     def open_user_window(self):

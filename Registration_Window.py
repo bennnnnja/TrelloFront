@@ -35,7 +35,9 @@ class Registration_Window:
         self.canvas.create_window(self.width // 2 + 300, self.height // 2 + 300, window=button2)
 
     def close_registration_window(self):
-        self.app.withdraw()
+        from Main_Window import Main_Window
+        self.app.destroy()
+        Main_Window()
 
     # команда для кнопки OK
     def save_registrtation_window(self):
