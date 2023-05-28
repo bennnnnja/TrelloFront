@@ -29,7 +29,9 @@ class User_Window:
         
     #закрытие окна
     def close_window(self):
+        from Main_Window import Main_Window
         self.app.destroy()
+        Main_Window()
     
    
 

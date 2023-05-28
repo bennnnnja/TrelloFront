@@ -31,11 +31,13 @@ class Main_Window:
 
     #закрытие окна
     def close_window(self):
-        self.app.destroy()
+        self.app.withdraw()
 
     def open_registration_window(self):
+        self.app.withdraw()
         Registration_Window()
     
     def open_login_window(self):
+        self.app.withdraw()
         Login_Window()
 
