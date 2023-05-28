@@ -25,7 +25,7 @@ class Main_Window:
         button2 = ctk.CTkButton(self.app, corner_radius= 30, bg_color = '#689AD3', fg_color= '#2c4663', text = "Войти", width=200, height =50, font=("Arial", 20), command = (self.open_login_window))
         button3 = ctk.CTkButton(self.app, corner_radius= 30, bg_color = '#689AD3', fg_color= '#2c4663', text = "Закрыть", width=200, height =50, font=("Arial", 20), command = (self.close_window))
         #добавляем кнопки на полотно
-        self.canvas.create_window(self.width//2, self.height//2 -100, window= button1)
+        self.canvas.create_window(self.width//2, self.height // 2 - 100, window= button1)
         self.canvas.create_window(self.width // 2 , self.height // 2 , window=button2)
         self.canvas.create_window(self.width // 2 , self.height // 2 + 100, window=button3)
 
@@ -34,8 +34,11 @@ class Main_Window:
         self.app.destroy()
 
     def open_registration_window(self):
+        self.app.withdraw()
         Registration_Window()
+        
     
     def open_login_window(self):
+        self.app.withdraw()
         Login_Window()
 

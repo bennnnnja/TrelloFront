@@ -1,7 +1,7 @@
-from User_Window import User_Window
+from Main_Window import Main_Window
 from Request import Request
 
 
 
-User_Window()
+Main_Window()
 request = Request()
