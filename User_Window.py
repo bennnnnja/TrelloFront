@@ -38,10 +38,10 @@ class User_Window:
         Main_Window()
     
     def create_zim(self):
-        radiobutton_var = ctk.StringVar(value="Private")
-        radiobutton_1 = ctk.CTkRadioButton(master=self.app, variable=radiobutton_var, value="Private", bg_color = '#2c4663' , text = "Приватная доска")
+        self.radiobutton_var = tk.StringVar(value="public")
+        radiobutton_1 = ctk.CTkRadioButton(master=self.app, variable=self.radiobutton_var, value="private", bg_color = '#2c4663' , text = "Приватная доска")
         self.canvas.create_window(self.width//4, self.height//2 -50, window=  radiobutton_1)
-        radiobutton_2 = ctk.CTkRadioButton(master=self.app, variable=radiobutton_var, value="Public", bg_color= '#2c4663', text = "Публичная доска")
+        radiobutton_2 = ctk.CTkRadioButton(master=self.app, variable=self.radiobutton_var, value="public", bg_color= '#2c4663', text = "Публичная доска")
         self.canvas.create_window(self.width//4, self.height//2, window= radiobutton_2)
         frame2 = ctk.CTkFrame(self.app, bg_color="#689AD3", fg_color= '#689AD3')
         self.name_board = CTkEntry(frame2, bg_color='#689AD3', fg_color= '#2c4663', width=200, font=("Arial", 12))
@@ -53,7 +53,7 @@ class User_Window:
 
     def create_board(self):
         desk_name= self.name_board.get()
-        desk_type=self.radiobutton.get()
+        desk_type=self.radiobutton_var.get()
         create = self.request.create_desk(desk_name,desk_type)
         if create == "Desk exists!":
             self.show_error_window("Доска с таким названием уже существует")
