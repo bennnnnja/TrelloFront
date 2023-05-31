@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from customtkinter import CTkEntry
 from User_Window import User_Window
+from Request import Request
 
 
 
@@ -44,23 +45,19 @@ class Login_Window:
 
     # команда для кнопки OK доделать когда будет бэк
     def open_user_window(self):
-        self.validate_login()
-        self.validate_password()
         login = self.login_entry.get()
         password = self.password_entry.get()
+        entr = self.request.entrance(login, password)
          
         
-        if not self.login_valid:
+        if entr == "Declined!":
             self.show_error_window("Некоректный логин. Логин должен быть длинее 6 символов")
             return
 
-        if not self.password_valid:
-            self.show_error_window("Некоректный пароль. Пароль может содердать только цыфры и буквы и должен быть не короче 8 символов")
-            return
-        if self.login_valid and self.password_valid:
+        else:   
              self.app.withdraw()
              # создаем экземпляр класса AddWindow
-             User_Window()
+             User_Window(self.request)
              # Показываем главное окно после закрытия окна AddWindow
              self.app.deiconify()
         
