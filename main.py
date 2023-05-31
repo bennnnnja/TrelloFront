@@ -1,7 +1,7 @@
 from Main_Window import Main_Window
-#from Request import Request
+from Request import Request
 
 
+request = Request()
+Main_Window(request)
 
-Main_Window()
-#request = Request()
