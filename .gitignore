@@ -1,7 +1,7 @@
 # Visual Studio Code
 .vscode/
 *.code-workspace
-__pycache__
+__pycache__/
 
 # Visual Studio
 *.sln
@@ -23,4 +23,4 @@ __pycache__
 *.tlh
 *.manifest
 *.natvis
-__pycache__
+__pycache__/

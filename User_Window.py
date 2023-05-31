@@ -49,6 +49,7 @@ class User_Window:
         self.canvas.create_window(230, 400, window=frame2)
         button4 = ctk.CTkButton(self.app, corner_radius= 30, bg_color = '#689AD3', fg_color= '#2c4663', text = "ок", width=100, height =25, font=("Arial", 20), command= self.create_board)
         self.canvas.create_window(240, 450, window= button4)
+        print("g")
 
 
     def create_board(self):
