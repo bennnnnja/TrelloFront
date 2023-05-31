@@ -77,3 +77,4 @@ class User_Window:
 
         button6 = ctk.CTkButton(self.app, corner_radius= 30, bg_color = '#689AD3', fg_color= '#2c4663', text = "Выбрать", width=100, height =25,  font=("Arial", 10))
         self.canvas.create_window(self.width//1.5, self.height//2+20, window= button6)
+    
