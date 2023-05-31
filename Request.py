@@ -1,7 +1,7 @@
 import socket
 
 class Request:
-    def init(self, host='127.0.0.1', port=65432):
+    def __init__(self, host='127.0.0.1', port=65432):
         self.host = host
         self.port = port
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
