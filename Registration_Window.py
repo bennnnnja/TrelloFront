@@ -59,7 +59,7 @@ class Registration_Window:
         if self.login_valid and self.password_valid:
             reg = self.request.new_user(login, password)
             if reg == "Account created!":
-                self.request.new_user(login,password)
+
                 self.show_error_window("Аккаунт создан")
             else:return
         
