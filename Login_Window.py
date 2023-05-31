@@ -2,6 +2,8 @@ import customtkinter as ctk
 from customtkinter import CTkEntry
 from User_Window import User_Window
 from Request import Request
+from app import App
+import random
 
 
 
@@ -58,7 +60,13 @@ class Login_Window:
         else:   
              self.app.withdraw()
              # создаем экземпляр класса AddWindow
-             User_Window(self.request)
+             ctk.set_appearance_mode('Dark')
+             ctk.set_default_color_theme('dark-blue')
+
+
+             random.seed(8179)
+             app = App(1920, 1080, self.request)
+             app.mainloop()
              # Показываем главное окно после закрытия окна AddWindow
              self.app.deiconify()
         

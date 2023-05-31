@@ -3,18 +3,17 @@ import os
 import random
 import tkinter as tk
 from string import ascii_lowercase
-
 import customtkinter as ctk
 from tktooltip import ToolTip
-
 from custom_dialogs import CustomChoiceBox, CustomConfirmationBox
 from custom_frames import ColumnFrame, MainFrame
 
 
 class App(ctk.CTk):
-    def __init__(self, width, height):
+    def __init__(self, width, height, request):
         super().__init__()
         self.title('FakeTrello')
+        self.request = request
         self.geometry('1300x650')
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
