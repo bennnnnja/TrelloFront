@@ -41,6 +41,24 @@ class Request:
         data_list = new_data.split('\n')
         return data_list
 
+    def SendJson(self, Jsonfile):
+        data = "NewJson?"
+        with open(f'json/{Jsonfile}.json', 'r') as f:
+                for i in f:
+                    data+=str(i)
+                
+        self.sock.send(data.encode('utf-8'))
+
+    def LoadJson(self):
+        data = "UnloadJson?"
+        self.sock.send(data.encode('utf-8'))
+        response = self.sock.recv(1024)
+        
+        
+        with open("json/newjson.json", "a+") as f:
+                f.write(str(response))
+
+
 
 
 
