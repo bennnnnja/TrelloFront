@@ -1,12 +1,14 @@
 import customtkinter as ctk
 from customtkinter import CTkEntry
+from Request import Request
 
 
 class Registration_Window:
-    def __init__(self, width=900, height=700):
+    def __init__(self,request, width=900, height=700):
         self.width = width
         self.height = height
         self.app = ctk.CTk()
+        self.request = request
         self.app.title("Окно регистарции")
         self.app.geometry(f"{width}x{height}")
         self.app.configure(bg_color= "#689AD3")
@@ -57,6 +59,7 @@ class Registration_Window:
         if self.login_valid and self.password_valid:
             reg = self.request.new_user(login, password)
             if reg == "Account created!":
+
                 self.show_error_window("Аккаунт создан")
             else:return
         

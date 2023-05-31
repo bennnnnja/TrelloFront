@@ -3,6 +3,8 @@
 *.code-workspace
 
 # Visual Studio
+.vs/
+__pycache__/
 *.sln
 *.vcxproj
 *.vcxproj.filters

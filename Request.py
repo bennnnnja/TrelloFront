@@ -34,14 +34,12 @@ class Request:
 
 
     def UnloadData(self):
-        data = "UnloadUsers?"
+        data = "UnloadData?"
         self.sock.send(data.encode('utf-8'))
         response = self.sock.recv(1024)
         new_data = str(response.decode('utf-8'))
         data_list = new_data.split('\n')
         return data_list
-
-
 
 
 
