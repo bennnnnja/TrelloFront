@@ -39,7 +39,7 @@ class Main_Window:
         self.app.destroy()
 
     def open_registration_window(self):
-        self.app.withdraw()
+        
         Registration_Window(self.request)
         
     

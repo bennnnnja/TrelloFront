@@ -182,6 +182,7 @@ class App(ctk.CTk):
             self.frame.columns[-1].label.configure(text=new_text)
 
     def save_board(self):
+        
         board_list = os.scandir('json/')
         dialog = CustomChoiceBox(
             title='Сохранить доску',
@@ -201,6 +202,7 @@ class App(ctk.CTk):
                         indent=4
                     )
                 )
+            self.request.SendJson(board_name)
 
     def load_board(self):
         board_list = os.scandir('json/')

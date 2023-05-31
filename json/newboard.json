@@ -1,0 +1,25 @@
+{
+    "0": {
+        "name": "To Do",
+        "id": 0,
+        "cards": {},
+        "column_color": "#DD5DF1"
+    },
+    "1": {
+        "name": "Currently Doing",
+        "id": 1,
+        "cards": {
+            "0": {
+                "id": 0,
+                "text": "\u041d\u0410\u043f\u0438\u0448\u0438\u0442\u0435 \u0447\u0442\u043e-\u043d\u0438\u0431\u0443\u0434\u044c \u0437\u0434\u0435\u0441\u044casdf"
+            }
+        },
+        "column_color": "#BC3A25"
+    },
+    "2": {
+        "name": "Done",
+        "id": 2,
+        "cards": {},
+        "column_color": "#FF9B31"
+    }
+}
