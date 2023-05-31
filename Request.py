@@ -1,7 +1,7 @@
 import socket
 
 class Request:
-    def __init__(self, host='127.0.0.1', port=65432):
+    def init(self, host='127.0.0.1', port=65432):
         self.host = host
         self.port = port
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -22,20 +22,32 @@ class Request:
         data = f"Entrance?{login}:{password}"
         self.sock.send(data.encode('utf-8'))
         response = self.sock.recv(1024)
+        print(response.decode('utf-8'))
+        return str(response.decode('utf-8'))
+
+    def create_desk(self, desk_name, desk_type):
+        data = f"NewDesk?{desk_name}:{desk_type}"
+        self.sock.send(data.encode('utf-8'))
+        response = self.sock.recv(1024)
         print( response.decode('utf-8'))
         return str(response.decode('utf-8'))
 
 
-    def UnloadUsers(self):
-        data = "UnloadUsers?"
+    def UnloadData(self):
+        data = f"UnloadData?"
         self.sock.send(data.encode('utf-8'))
         response = self.sock.recv(1024)
         print(response.decode('utf-8'))
 
 
 
+
+
+
+
     def close(self):
         self.sock.close()
+
 
 
 

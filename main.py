@@ -3,5 +3,6 @@ from Request import Request
 
 
 
-Main_Window()
+
 request = Request()
+Main_Window(request)

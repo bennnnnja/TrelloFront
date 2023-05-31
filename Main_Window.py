@@ -3,11 +3,13 @@ from Registration_Window import Registration_Window
 from Login_Window import Login_Window
 
 
+
 class Main_Window:
-    def __init__(self, width = 900, height = 700):
+    def __init__(self,request, width = 900, height = 700):
         self.width = width
         self.height = height
         self.app = ctk.CTk()
+        self.request = request
         self.app.title("Task manager")
         self.app.geometry(f"{width}x{height}")
         self.app.configure(bg = "#689AD3")
