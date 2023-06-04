@@ -5,6 +5,7 @@ from Request import Request
 
 
 
+
 class Login_Window:
     def __init__(self,request, width=900, height=700):
         self.width = width
@@ -43,6 +44,7 @@ class Login_Window:
         from Main_Window import Main_Window
         self.app.destroy()
         Main_Window()
+        
 
     # команда для кнопки OK доделать когда будет бэк
     def open_user_window(self):
